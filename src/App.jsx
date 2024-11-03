@@ -1,66 +1,96 @@
  
 import './App.css'
-import Form from './Form'
+ import Form from './Form'
+import StepperForm from './StepperForm';
 
 function App() {
 
  const AllSteps = [
     
   {
-      title:"Basic Info",
+    title: "User Info",
     inputs: [
       {
-        name: "name",
-        label: "Enter you Name",
+        name: "firstName",
+        label: "Enter your First Name",
         type: "text",
-        id: "name",
+        id: "firstName",
+      },
+      {
+        name: "lastName",
+        label: "Enter your Last Name",
+        type: "text",
+        id: "lastName",
       },
       {
         name: "email",
-        label: "Enter you Email",
+        label: "Enter your Email",
         type: "email",
         id: "email",
       },
+      {
+        name: "phoneNumber",
+        label: "Enter your Phone Number",
+        type: "tel",
+        id: "phoneNumber",
+      },
     ],
   },
-
   {
-      title:"Father info",
+    title: "Parent Info",
     inputs: [
       {
         name: "fatherName",
-        label: "Enter you father name",
+        label: "Enter your Father's Name",
         type: "text",
         id: "fatherName",
       },
       {
-        name: "fatherAge",
-        label: "Enter you father age",
-        type: "number",
-        id: "fatherAge",
+        name: "fatherPhone",
+        label: "Enter your Father's Phone Number",
+        type: "tel",
+        id: "fatherPhone",
       },
-    ],
-  },
-  {
-      title:"mother info",
-    inputs: [
       {
         name: "motherName",
-        label: "Enter you mother name",
+        label: "Enter your Mother's Name",
         type: "text",
         id: "motherName",
       },
       {
-        name: "motherAge",
-        label: "Enter you mother age",
-        type: "number",
-        id: "motherAge",
+        name: "motherPhone",
+        label: "Enter your Mother's Phone Number",
+        type: "tel",
+        id: "motherPhone",
+      },
+    ],
+  },
+  {
+    title: "Address Info",
+    inputs: [
+      {
+        name: "country",
+        label: "Enter your Country",
+        type: "text",
+        id: "country",
       },
       {
-        name: "botherAge",
-        label: "Enter you brother age",
-        type: "number",
-        id: "botherAge",
+        name: "currentAddress",
+        label: "Enter your Current Address",
+        type: "text",
+        id: "currentAddress",
+      },
+      {
+        name: "permanentAddress",
+        label: "Enter your Permanent Address",
+        type: "text",
+        id: "permanentAddress",
+      },
+      {
+        name: "postalCode",
+        label: "Enter your Postal Code",
+        type: "text",
+        id: "postalCode",
       },
     ],
   },
@@ -69,7 +99,9 @@ function App() {
 
   return (
     <>
-      <Form AllSteps={AllSteps}></Form> 
+      <Form AllSteps={AllSteps}></Form>   
+      {/* <StepperForm AllSteps={AllSteps}></StepperForm> */}
+{/* passes allSteps to the form and render */}
     </>
   )
 }
